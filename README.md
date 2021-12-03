@@ -2,7 +2,7 @@
 
 Welcome to our first Year-End Tournament of Imagination (YETI) Challenge! 
 
-We'll have five days of code-related challenges, starting on December 13 and ending on December 17. Challenges will be related to algorithms and data-handling, and each can be accomplished in <50 lines of code. The winner will get bragging rights for a year, their name on the YETI Plaque, and a cash prize. 
+We'll have five days of code-related challenges, starting on December 13 and ending on December 17. Challenges will be related to algorithms and data-handling, and each can be accomplished in <50 lines of code. The winner will get bragging rights for a year and their name on the YETI Plaque. Monetary prizes up to $100 will be up for grabs as well.
 
 Each day's challenge will build off the previous days, and instructions will appear in this repository. Additional information may be found in the #yeti channel of the department-wide Slack. 
 
