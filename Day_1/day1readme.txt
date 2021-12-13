@@ -1,0 +1,1 @@
+This should just be able to be run from the command line and print out the correct string "P6aP". If we wanted to reverse a different hash, we could put in the string into print(getPTX())
