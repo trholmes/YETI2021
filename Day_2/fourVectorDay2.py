@@ -17,7 +17,7 @@ for lineNumber,line in enumerate(csv_reader,1):
     fourVectors.append(Momentum4(line[3],line[0],line[1],line[2]))
     #creates list of four momenta (E,px,py,pz)
 f.close()
-plt.hist2d(pseudoRap,azimuthal,bins=250, cmap='winter', norm=LogNorm())
+plt.hist2d(pseudoRap,azimuthal,bins=250, cmap='viridis', norm=LogNorm())
 plt.colorbar()
 plt.title('2D Histogram of Pseudorapidity vs Azimuthal Angle (aka Knoxville)')
 plt.xlabel(r'Pseudorapidity $\eta$')
