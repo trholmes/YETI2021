@@ -28,13 +28,12 @@ def main() -> None:
         fr = csv.reader(incsv, delimiter=",")
         for row in fr:
             vec4s.append(Vec4(row))
-    # collect the angles
-    etas = [i.eta for i in vec4s]
-    phis = [i.phi for i in vec4s]
-
-    # lognorm color scale makes the low count bins stand out
-    h = pyplot.hist2d(phis, etas, bins=200, norm=LogNorm())
+    # collect angles and plot histogram
+    # lognorm scale makes the low count bins stand out
+    h = pyplot.hist2d([i.eta for i in vec4s], [i.phi for i in vec4s], bins=200, norm=LogNorm())
     pyplot.colorbar(h[3])
+    pyplot.xlabel("Pseudorapidity")
+    pyplot.ylabel("Azimuthal angle")
     pyplot.savefig("../data/phi-v-eta-py.png")
 
 
