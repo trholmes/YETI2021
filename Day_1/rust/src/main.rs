@@ -63,12 +63,4 @@ fn main() {
         }
     }
     println!("string with matching hash is {}", outstr)
-        
-    // get the html
-
-
-    // scrape to find the link we need
-
-
-    // download the data
 }
