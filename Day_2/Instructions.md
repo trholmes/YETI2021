@@ -1,0 +1,3 @@
+# Day 2
+
+The CSV file from yesterday contains 100k particle four-momenta. Each line represents the Px, Py, Pz, and E of each particle. Read in this file and create four-vector objects representing each particle. (The `TLorentzVector` class from ROOT is a good option, but you can do this however you like.) Make a histogram of the azimuthal angle phi vs pseudorapidity eta of these particles to reveal a clue to be used later.
