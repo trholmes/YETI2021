@@ -1,0 +1,1 @@
+Primesieve uses C/C++ to quickly generate primes and needs to be installed via pip install primesieve. Otherwise I think nothing else is needed
