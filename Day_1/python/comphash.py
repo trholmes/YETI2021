@@ -27,7 +27,7 @@ urlafterredirect = urllib.request.urlopen(tinylink).geturl()
 print(urlafterredirect)
 
 # get the html from the webpage and save it
-sitehtml = urllib.request.urlretrieve(tinylink, "../htmlresult.html")
+sitehtml = urllib.request.urlretrieve(tinylink, "../data/htmlresult.html")
 
 # open that as a string, saves a bit of encode decode headache
 sitehtmlstr = ''
