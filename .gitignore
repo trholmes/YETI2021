@@ -1,5 +1,5 @@
 Day_1/C++/**.o
 Day_1/C++/**.txt
-Day_1/C#/bin/**
-Day_1/C#/obj/**
-Day_1/rust/target/**
+**/C#/bin/**
+**/C#/obj/**
+**/rust/target/**
