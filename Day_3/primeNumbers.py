@@ -9,8 +9,8 @@ from primesieve import *
 primenums = n_primes(500)
 #first 500 prime numbers
 #primesieve uses C to generate list of primes, it works faster than the sieve I tried to code
-sumPrimes = lambda ind, seqLen: sum(primenums[ind:ind+seqLen])
-#index is the index of the number to start summing from, seqLen is the 
+sumPrimes = lambda idx, seqLen: sum(primenums[idx:idx+seqLen])
+#idx is the index of the number to start summing from, seqLen is the 
 #number of consecutive primes
 sumsOfThree = [sumPrimes(i, 3) for i in range(497)]
 sumsOfThreeAndNine = [sumPrimes(i,9) for i in range(492) if sumPrimes(i,9) in sumsOfThree]
