@@ -65,7 +65,7 @@ namespace C_comphash
             // download the final url 
             WebClient client = new WebClient();
             string htmlstring = client.DownloadString($"https://tiny.utk.edu/{t_string}");
-            System.IO.File.WriteAllText("page.html", htmlstring);
+            System.IO.File.WriteAllText("../data/page.html", htmlstring);
 
             // we know it's a gist based on the HTML we got, let's get the raw address
             Regex regex = new Regex("href=\"(.+raw.+?)\"", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -74,7 +74,7 @@ namespace C_comphash
             {
                 matchstr += match.Groups[1].Value;
             }
-            client.DownloadFile($"https://gist.github.com/{matchstr}", "FourVectorTest.csv");
+            client.DownloadFile($"https://gist.github.com/{matchstr}", "../data/FourVectorTest.csv");
         }
     }
 }

@@ -27,11 +27,11 @@ urlafterredirect = urllib.request.urlopen(tinylink).geturl()
 print(urlafterredirect)
 
 # get the html from the webpage and save it
-sitehtml = urllib.request.urlretrieve(tinylink, "../data/htmlresult.html")
+sitehtml = urllib.request.urlretrieve(tinylink, "../data/page.html")
 
 # open that as a string, saves a bit of encode decode headache
 sitehtmlstr = ''
-with open("../data/htmlresult.html", "r") as fp:
+with open("../data/page.html", "r") as fp:
     sitehtmlstr = ".".join(fp.readlines())
 
 # seems it's a gist, regex to find the raw path
@@ -39,4 +39,4 @@ downloadpath = urlafterredirect + "/" + re.findall("href=.+/(raw.+?)\"", sitehtm
 
 print(downloadpath)
 # download and save the data, using the path we found above
-rawdat = urllib.request.urlretrieve(downloadpath, "FourVectorTest.csv")
+rawdat = urllib.request.urlretrieve(downloadpath, "../data/FourVectorTest.csv")
