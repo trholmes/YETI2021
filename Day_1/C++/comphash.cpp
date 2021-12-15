@@ -47,7 +47,6 @@ int main(void) {
                                     (std::istreambuf_iterator<char>()    ) );
         ifs.close();
     }
-    std::cout << targetstr << std::endl;
     
     // generator for combinations
     strgen generator = strgen();
@@ -59,26 +58,26 @@ int main(void) {
     unsigned char hash[MD5_DIGEST_LENGTH];
     while(true){
         MD5((unsigned char *)t_str.c_str(), pwd_length, hash);
-        // this lovely mess can be blamed on my compiler not recognizing c++20
+        // this lovely mess can be blamed on my compiler not recognizing std::format()
         std::string hashstr = (boost::format("%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x")%
             (int)hash[0]%(int)hash[1]%(int)hash[2]%(int)hash[3]%
             (int)hash[4]%(int)hash[5]%(int)hash[6]%(int)hash[7]%
             (int)hash[8]%(int)hash[9]%(int)hash[10]%(int)hash[11]%
             (int)hash[12]%(int)hash[13]%(int)hash[14]%(int)hash[15]).str();
         //std::cout << hashstr << std::endl;
-        if (hashstr.compare(targetstr) == 0)
-        {   
+        if (hashstr.compare(targetstr) == 0) {   
             break;
         }
-        // do after the loop so that we can store it before the initial loop
+        // do after the loop body so that we can store it before the initial loop
         t_str = generator.next();
-        if (t_str.compare(first) == 0)
-        {
+        // a little bit of insurance to prevent infinite loops
+        // could probably store this on the generator though
+        if (t_str.compare(first) == 0) {
             std::cout << "failed to find hash" << std::endl;
             return -1;
         }
     }
        
-    std::cout << t_str << std::endl;
+    std::cout << "The string with the hash " << targetstr << " is " << t_str << std::endl;
     
 }
