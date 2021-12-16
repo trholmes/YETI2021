@@ -1,0 +1,1 @@
+Should be able to just run from the command line. It generates what looks like hex codes for colors so we potentially have to generate an image??
