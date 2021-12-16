@@ -14,8 +14,8 @@ class Vec4:
                             self.Pz * self.Pz)
         self.E  = float(vec[3])
         self.Pt = math.sqrt(self.Px * self.Px + self.Py * self.Py)
-        self.phi = math.acos(self.Px / self.P)
-        self.eta = math.atanh(self.Pz / self.P)
+        self.phi = math.acos(self.Px / self.Pt)
+        self.eta = math.asinh(self.Pz / self.Pt)
     
     # allows a pretty print to make sure the data came in nicely
     def __repr__(self) -> str:
@@ -31,7 +31,7 @@ def main() -> None:
     # collect angles and plot histogram
     # lognorm scale makes the low count bins stand out
     h = pyplot.hist2d([i.eta for i in vec4s], [i.phi for i in vec4s], bins=200, norm=LogNorm())
-    pyplot.colorbar(h[3])
+    #pyplot.colorbar(h[3])
     pyplot.xlabel("Pseudorapidity")
     pyplot.ylabel("Azimuthal angle")
     pyplot.savefig("../data/phi-v-eta-py.png")
