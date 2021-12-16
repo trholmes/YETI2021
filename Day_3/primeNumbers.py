@@ -8,7 +8,7 @@ Created on Wed Dec 15 12:31:03 2021
 from primesieve import *
 primenums = n_primes(500)
 #first 500 prime numbers
-#primesieve uses C to generate list of primes, it works faster than the sieve I tried to code
+#primesieve uses C to generate list of primes, it works faster than the sieve I coded
 sumPrimes = lambda idx, seqLen: sum(primenums[idx:idx+seqLen])
 #idx is the index of the number to start summing from, seqLen is the 
 #number of consecutive primes
