@@ -35,12 +35,9 @@ with open(datapath, "r") as fp:
 asbytes = bytearray.fromhex(rawdat)
 
 print("Composing pixels")
-pixels = [[0.0, 0.0, 0.0]] * (len(rawdat) // 6)
-
 colorvals = [0] * len(asbytes)
 for i in range(len(colorvals)):
     colorvals[i] = asbytes[i] / 255.0
-
 
 picwidth  = evenfibs[8] // oddfibs[5]
 picheight = len(colorvals) // (3 * picwidth)
