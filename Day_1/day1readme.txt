@@ -1,0 +1,1 @@
+This should just be able to be run from the command line and print out the correct string "P6aP". getPTX takes three arguments, the hash we wish to reverse, and the known character list/length of the string that should be returned

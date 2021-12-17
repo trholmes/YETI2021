@@ -1,0 +1,1 @@
+Opens encrypted.txt generated from the vigenere.py code and saves final image as finalday.png
