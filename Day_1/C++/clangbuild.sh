@@ -1,0 +1,1 @@
+clang++ -l ssl -l crypto comphash.cpp -O3 -v -o comphash.o  2> builderr.txt 

@@ -1,0 +1,1 @@
+This is just a nice place to put reference data for different versions of the code. This was extracted using python. There are currently versions for python, C# and rust that at least get the end of the page's address.
