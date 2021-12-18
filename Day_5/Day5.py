@@ -40,7 +40,7 @@ def main():
     n = calculate_width() #width of image
     image_data = []
     count = 0
-    with open('../Day_4/plainText.txt', 'r') as f:
+    with open('../Day_4/encodedText.txt', 'r') as f:
         while True:
             block = ''
             end = False
