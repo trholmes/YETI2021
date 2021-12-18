@@ -32,23 +32,22 @@ class MyNumber:
         #pointer for three primes point at the second last of the nine primes
         three_primes_ptr  = nine_primes_ptr + 9 - 2 
         self.precalculate_next_n_primes(10)
-        while n < 5: 
-            while True:
-                if nine_primes_ptr + 9 > len(self.primes_cache) or three_primes_ptr+3 > len(self.primes_cache):
-                    self.precalculate_next_n_primes(10)
+        while True:
+            if nine_primes_ptr + 9 > len(self.primes_cache) or three_primes_ptr+3 > len(self.primes_cache):
+                self.precalculate_next_n_primes(10)
 
-                sum_nine = sum(self.primes_cache[nine_primes_ptr: nine_primes_ptr+9]) 
-                sum_three = sum(self.primes_cache[three_primes_ptr: three_primes_ptr+3]) 
+            sum_nine = sum(self.primes_cache[nine_primes_ptr: nine_primes_ptr+9]) 
+            sum_three = sum(self.primes_cache[three_primes_ptr: three_primes_ptr+3]) 
 
-                if sum_nine > sum_three:
-                    three_primes_ptr += 1
-                elif sum_three > sum_nine:
-                    nine_primes_ptr += 1
-                elif sum_nine == sum_three:
-                    n += 1
-                    nine_primes_ptr += 1
-                    if n == 5 :
-                        return sum_nine
+            if sum_nine > sum_three:
+                three_primes_ptr += 1
+            elif sum_three > sum_nine:
+                nine_primes_ptr += 1
+            elif sum_nine == sum_three:
+                n += 1
+                nine_primes_ptr += 1
+                if n == 5 :
+                    return sum_nine
 
 
 def main():
